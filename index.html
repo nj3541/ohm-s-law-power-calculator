@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ohm's Law & Power Helper | EEE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Ohm's Law & Power Helper</h1>
+    <p>Quick calculator for E, I, R and P for EEE students.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Inputs</h2>
+      <p>Fill any two values, leave others blank.</p>
+
+      <div class="grid">
+        <label>
+          Voltage V (volts)
+          <input type="number" id="voltage" placeholder="e.g. 12" step="0.01" />
+        </label>
+        <label>
+          Current I (amps)
+          <input type="number" id="current" placeholder="e.g. 0.5" step="0.01" />
+        </label>
+        <label>
+          Resistance R (ohms)
+          <input type="number" id="resistance" placeholder="e.g. 24" step="0.01" />
+        </label>
+        <label>
+          Power P (watts)
+          <input type="number" id="power" placeholder="optional" step="0.01" />
+        </label>
+      </div>
+
+      <div class="buttons">
+        <button id="calcBtn">Calculate</button>
+        <button id="clearBtn" class="ghost">Clear</button>
+      </div>
+      <p class="hint">Uses basic formulas: V = I·R, P = V·I.</p>
+    </section>
+
+    <section class="card">
+      <h2>Results</h2>
+      <ul id="results" class="results"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Quick theory</h2>
+      <ul>
+        <li>Ohm’s law: V = I·R.</li>
+        <li>Power: P = V·I = I²R = V²/R.</li>
+        <li>Use this tool to double‑check numericals while studying circuits.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Threesa Nayana Joseph • EEE mini tool</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
